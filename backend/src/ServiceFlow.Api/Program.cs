@@ -1,5 +1,12 @@
+using ServiceFlow.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString =
+    builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException(
+        "DefaultConnection was not found.");
+
+builder.Services.AddInfrastructure(connectionString);
 // Add services to the container.
 
 builder.Services.AddControllers();

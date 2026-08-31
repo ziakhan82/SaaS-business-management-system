@@ -1,4 +1,6 @@
 using ServiceFlow.Infrastructure;
+using ServiceFlow.Application.Interfaces.Services;
+using ServiceFlow.Application.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString =
@@ -9,9 +11,14 @@ var connectionString =
 builder.Services.AddInfrastructure(connectionString);
 // Add services to the container.
 
+builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+
 
 var app = builder.Build();
 

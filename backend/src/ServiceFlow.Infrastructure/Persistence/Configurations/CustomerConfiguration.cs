@@ -46,6 +46,7 @@ public sealed class CustomerConfiguration
         {
             customer.CompanyId,
             customer.Email
-        });
+        })
+        .IsUnique();
     }
 }

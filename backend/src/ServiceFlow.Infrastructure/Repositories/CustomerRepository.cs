@@ -55,6 +55,23 @@ public sealed class CustomerRepository : ICustomerRepository
         _dbContext.Customers.Remove(customer);
     }
 
+    public async Task<bool> EmailExistsAsync(
+    Guid companyId,
+    string email,
+    Guid? excludeCustomerId = null,
+    CancellationToken cancellationToken = default)
+    {
+        return await _dbContext.Customers
+            .AsNoTracking()
+            .AnyAsync(
+                customer =>
+                    customer.CompanyId == companyId &&
+                    customer.Email == email &&
+                    (!excludeCustomerId.HasValue ||
+                     customer.Id != excludeCustomerId.Value),
+                cancellationToken);
+    }
+
     public async Task SaveChangesAsync(
         CancellationToken cancellationToken = default)
     {

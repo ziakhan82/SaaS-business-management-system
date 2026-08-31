@@ -39,11 +39,6 @@ public sealed class CustomersController : ControllerBase
             companyId,
             cancellationToken);
 
-        if (customer is null)
-        {
-            return NotFound();
-        }
-
         return Ok(customer);
     }
 
@@ -55,14 +50,6 @@ public sealed class CustomersController : ControllerBase
         var customer = await _customerService.CreateAsync(
             request,
             cancellationToken);
-
-        if (customer is null)
-        {
-            return BadRequest(new
-            {
-                message = "The specified company does not exist."
-            });
-        }
 
         return CreatedAtAction(
             nameof(GetById),
@@ -87,11 +74,6 @@ public sealed class CustomersController : ControllerBase
             request,
             cancellationToken);
 
-        if (customer is null)
-        {
-            return NotFound();
-        }
-
         return Ok(customer);
     }
 
@@ -101,15 +83,10 @@ public sealed class CustomersController : ControllerBase
         [FromQuery] Guid companyId,
         CancellationToken cancellationToken)
     {
-        var deleted = await _customerService.DeleteAsync(
+        await _customerService.DeleteAsync(
             id,
             companyId,
             cancellationToken);
-
-        if (!deleted)
-        {
-            return NotFound();
-        }
 
         return NoContent();
     }

@@ -13,6 +13,12 @@ public interface ICustomerRepository
         Guid companyId,
         CancellationToken cancellationToken = default);
 
+    Task<bool> EmailExistsAsync(
+    Guid companyId,
+    string email,
+    Guid? excludeCustomerId = null,
+    CancellationToken cancellationToken = default);
+
     Task AddAsync(
         Customer customer,
         CancellationToken cancellationToken = default);

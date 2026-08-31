@@ -1,3 +1,4 @@
+using FluentValidation;
 using ServiceFlow.Application.DTOs.Companies;
 using ServiceFlow.Application.Interfaces.Repositories;
 using ServiceFlow.Application.Interfaces.Services;
@@ -8,20 +9,28 @@ namespace ServiceFlow.Application.Services;
 public sealed class CompanyService : ICompanyService
 {
     private readonly ICompanyRepository _companyRepository;
+    private readonly IValidator<CreateCompanyRequest> _createValidator;
 
-    public CompanyService(ICompanyRepository companyRepository)
+    public CompanyService(
+        ICompanyRepository companyRepository,
+        IValidator<CreateCompanyRequest> createValidator)
     {
         _companyRepository = companyRepository;
+        _createValidator = createValidator;
     }
 
     public async Task<CompanyResponse> CreateAsync(
         CreateCompanyRequest request,
         CancellationToken cancellationToken = default)
     {
+        await _createValidator.ValidateAndThrowAsync(
+            request,
+            cancellationToken);
+
         var company = new Company
         {
             Name = request.Name.Trim(),
-            Email = request.Email.Trim(),
+            Email = request.Email.Trim().ToLowerInvariant(),
             Phone = request.Phone?.Trim()
         };
 

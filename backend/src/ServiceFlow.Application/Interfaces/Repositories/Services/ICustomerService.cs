@@ -8,22 +8,22 @@ public interface ICustomerService
         Guid companyId,
         CancellationToken cancellationToken = default);
 
-    Task<CustomerResponse?> GetByIdAsync(
+    Task<CustomerResponse> GetByIdAsync(
         Guid id,
         Guid companyId,
         CancellationToken cancellationToken = default);
 
-    Task<CustomerResponse?> CreateAsync(
+    Task<CustomerResponse> CreateAsync(
         CreateCustomerRequest request,
         CancellationToken cancellationToken = default);
 
-    Task<CustomerResponse?> UpdateAsync(
+    Task<CustomerResponse> UpdateAsync(
         Guid id,
         Guid companyId,
         UpdateCustomerRequest request,
         CancellationToken cancellationToken = default);
 
-    Task<bool> DeleteAsync(
+    Task DeleteAsync(
         Guid id,
         Guid companyId,
         CancellationToken cancellationToken = default);

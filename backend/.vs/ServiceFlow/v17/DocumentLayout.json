@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{93EE07C6-0978-483F-87DF-23D5824FFD0F}|src\\ServiceFlow.Infrastructure\\ServiceFlow.Infrastructure.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.infrastructure\\persistence\\configurations\\customerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EE07C6-0978-483F-87DF-23D5824FFD0F}|src\\ServiceFlow.Infrastructure\\ServiceFlow.Infrastructure.csproj|solutionrelative:src\\serviceflow.infrastructure\\persistence\\configurations\\customerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EE07C6-0978-483F-87DF-23D5824FFD0F}|src\\ServiceFlow.Infrastructure\\ServiceFlow.Infrastructure.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.infrastructure\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EE07C6-0978-483F-87DF-23D5824FFD0F}|src\\ServiceFlow.Infrastructure\\ServiceFlow.Infrastructure.csproj|solutionrelative:src\\serviceflow.infrastructure\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\interfaces\\repositories\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\interfaces\\repositories\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\common\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\common\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\common\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\validators\\customers\\updatecustomerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\validators\\customers\\updatecustomerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\validators\\customers\\createcustomerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\validators\\customers\\createcustomerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\validators\\companies\\createcompanyrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\validators\\companies\\createcompanyrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FD95EF9-F69E-4BC1-9F72-B8AB3CFE0955}|tests\\ServiceFlow.Tests\\ServiceFlow.Tests.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\tests\\serviceflow.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FD95EF9-F69E-4BC1-9F72-B8AB3CFE0955}|tests\\ServiceFlow.Tests\\ServiceFlow.Tests.csproj|solutionrelative:tests\\serviceflow.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +43,12 @@
       "RelativeMoniker": "D:0:0:{97072EA5-8200-448A-B1A4-3F378AC44747}|src\\ServiceFlow.Domain\\ServiceFlow.Domain.csproj|solutionrelative:src\\serviceflow.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|c:\\users\\ziaullah\\desktop\\saas-business-management-system\\backend\\src\\serviceflow.application\\serviceflow.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{AC0FCE19-01FB-41E9-A198-0E86B1EA2BF9}|src\\ServiceFlow.Application\\ServiceFlow.Application.csproj|solutionrelative:src\\serviceflow.application\\serviceflow.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\ServiceFlow.Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +58,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 182,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Infrastructure\\Persistence\\Configurations\\CustomerConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Infrastructure\\Persistence\\Configurations\\CustomerConfiguration.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Infrastructure\\Persistence\\Configurations\\CustomerConfiguration.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Infrastructure\\Persistence\\Configurations\\CustomerConfiguration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:40:11.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwEgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:38:16.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Interfaces\\Repositories\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Interfaces\\Repositories\\ICustomerRepository.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Interfaces\\Repositories\\ICustomerRepository.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Interfaces\\Repositories\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:36:07.209Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ConflictException.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Common\\Exceptions\\ConflictException.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Common\\Exceptions\\ConflictException.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Common\\Exceptions\\ConflictException.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Common\\Exceptions\\ConflictException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:34:08.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Common\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:34:00.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateCustomerRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Customers\\UpdateCustomerRequestValidator.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Validators\\Customers\\UpdateCustomerRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Customers\\UpdateCustomerRequestValidator.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Validators\\Customers\\UpdateCustomerRequestValidator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:21:40.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateCustomerRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Customers\\CreateCustomerRequestValidator.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Validators\\Customers\\CreateCustomerRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Customers\\CreateCustomerRequestValidator.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Validators\\Customers\\CreateCustomerRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:21:26.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateCompanyRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Companies\\CreateCompanyRequestValidator.cs",
+              "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Validators\\Companies\\CreateCompanyRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Validators\\Companies\\CreateCompanyRequestValidator.cs",
+              "RelativeToolTip": "src\\ServiceFlow.Application\\Validators\\Companies\\CreateCompanyRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T10:21:05.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\tests\\ServiceFlow.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "tests\\ServiceFlow.Tests\\UnitTest1.cs",
@@ -47,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Domain\\Class1.cs",
               "RelativeDocumentMoniker": "src\\ServiceFlow.Domain\\Class1.cs",
@@ -59,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\Class1.cs",
               "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\Class1.cs",
@@ -71,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "ServiceFlow.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Ziaullah\\Desktop\\SaaS-business-management-system\\backend\\src\\ServiceFlow.Application\\ServiceFlow.Application.csproj",
               "RelativeDocumentMoniker": "src\\ServiceFlow.Application\\ServiceFlow.Application.csproj",

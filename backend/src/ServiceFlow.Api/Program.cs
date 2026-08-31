@@ -1,6 +1,11 @@
+using FluentValidation;
+using ServiceFlow.Api.ExceptionHandling;
+using ServiceFlow.Application.DTOs.Customers;
 using ServiceFlow.Infrastructure;
 using ServiceFlow.Application.Interfaces.Services;
 using ServiceFlow.Application.Services;
+using ServiceFlow.Application.Validators.Customers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString =
@@ -9,18 +14,29 @@ var connectionString =
         "DefaultConnection was not found.");
 
 builder.Services.AddInfrastructure(connectionString);
-// Add services to the container.
+
+builder.Services.AddControllers();
+
+builder.Services.AddProblemDetails();
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<
+    CreateCustomerRequestValidator>();
 
 builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 
-builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 
 
 var app = builder.Build();
+
+app.UseExceptionHandler();
+
+app.UseStatusCodePages();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

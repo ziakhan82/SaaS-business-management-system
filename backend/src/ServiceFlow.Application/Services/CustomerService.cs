@@ -1,3 +1,5 @@
+using FluentValidation;
+using ServiceFlow.Application.Common.Exceptions;
 using ServiceFlow.Application.DTOs.Customers;
 using ServiceFlow.Application.Interfaces.Repositories;
 using ServiceFlow.Application.Interfaces.Services;
@@ -9,13 +11,19 @@ public sealed class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly ICompanyRepository _companyRepository;
+    private readonly IValidator<CreateCustomerRequest> _createValidator;
+    private readonly IValidator<UpdateCustomerRequest> _updateValidator;
 
     public CustomerService(
         ICustomerRepository customerRepository,
-        ICompanyRepository companyRepository)
+        ICompanyRepository companyRepository,
+        IValidator<CreateCustomerRequest> createValidator,
+        IValidator<UpdateCustomerRequest> updateValidator)
     {
         _customerRepository = customerRepository;
         _companyRepository = companyRepository;
+        _createValidator = createValidator;
+        _updateValidator = updateValidator;
     }
 
     public async Task<IReadOnlyList<CustomerResponse>> GetAllAsync(
@@ -32,7 +40,7 @@ public sealed class CustomerService : ICustomerService
             .ToList();
     }
 
-    public async Task<CustomerResponse?> GetByIdAsync(
+    public async Task<CustomerResponse> GetByIdAsync(
         Guid id,
         Guid companyId,
         CancellationToken cancellationToken = default)
@@ -43,23 +51,48 @@ public sealed class CustomerService : ICustomerService
                 companyId,
                 cancellationToken);
 
-        return customer is null
-            ? null
-            : Map(customer);
+        if (customer is null)
+        {
+            throw new NotFoundException(
+                "Customer",
+                id);
+        }
+
+        return Map(customer);
     }
 
-    public async Task<CustomerResponse?> CreateAsync(
+    public async Task<CustomerResponse> CreateAsync(
         CreateCustomerRequest request,
         CancellationToken cancellationToken = default)
     {
-        var company =
-            await _companyRepository.GetByIdAsync(
-                request.CompanyId,
-                cancellationToken);
+        await _createValidator.ValidateAndThrowAsync(
+            request,
+            cancellationToken);
+
+        var company = await _companyRepository.GetByIdAsync(
+            request.CompanyId,
+            cancellationToken);
 
         if (company is null)
         {
-            return null;
+            throw new NotFoundException(
+                "Company",
+                request.CompanyId);
+        }
+
+        var normalizedEmail =
+            request.Email.Trim().ToLowerInvariant();
+
+        var emailExists =
+            await _customerRepository.EmailExistsAsync(
+                request.CompanyId,
+                normalizedEmail,
+                cancellationToken: cancellationToken);
+
+        if (emailExists)
+        {
+            throw new ConflictException(
+                "A customer with this email already exists.");
         }
 
         var customer = new Customer
@@ -67,7 +100,7 @@ public sealed class CustomerService : ICustomerService
             CompanyId = request.CompanyId,
             FirstName = request.FirstName.Trim(),
             LastName = request.LastName.Trim(),
-            Email = request.Email.Trim(),
+            Email = normalizedEmail,
             Phone = request.Phone?.Trim(),
             Address = request.Address?.Trim(),
             PostalCode = request.PostalCode?.Trim(),
@@ -84,12 +117,16 @@ public sealed class CustomerService : ICustomerService
         return Map(customer);
     }
 
-    public async Task<CustomerResponse?> UpdateAsync(
+    public async Task<CustomerResponse> UpdateAsync(
         Guid id,
         Guid companyId,
         UpdateCustomerRequest request,
         CancellationToken cancellationToken = default)
     {
+        await _updateValidator.ValidateAndThrowAsync(
+            request,
+            cancellationToken);
+
         var customer =
             await _customerRepository.GetByIdAsync(
                 id,
@@ -98,12 +135,30 @@ public sealed class CustomerService : ICustomerService
 
         if (customer is null)
         {
-            return null;
+            throw new NotFoundException(
+                "Customer",
+                id);
+        }
+
+        var normalizedEmail =
+            request.Email.Trim().ToLowerInvariant();
+
+        var emailExists =
+            await _customerRepository.EmailExistsAsync(
+                companyId,
+                normalizedEmail,
+                id,
+                cancellationToken);
+
+        if (emailExists)
+        {
+            throw new ConflictException(
+                "Another customer with this email already exists.");
         }
 
         customer.FirstName = request.FirstName.Trim();
         customer.LastName = request.LastName.Trim();
-        customer.Email = request.Email.Trim();
+        customer.Email = normalizedEmail;
         customer.Phone = request.Phone?.Trim();
         customer.Address = request.Address?.Trim();
         customer.PostalCode = request.PostalCode?.Trim();
@@ -115,7 +170,7 @@ public sealed class CustomerService : ICustomerService
         return Map(customer);
     }
 
-    public async Task<bool> DeleteAsync(
+    public async Task DeleteAsync(
         Guid id,
         Guid companyId,
         CancellationToken cancellationToken = default)
@@ -128,7 +183,9 @@ public sealed class CustomerService : ICustomerService
 
         if (customer is null)
         {
-            return false;
+            throw new NotFoundException(
+                "Customer",
+                id);
         }
 
         _customerRepository.Delete(customer);
@@ -136,7 +193,6 @@ public sealed class CustomerService : ICustomerService
         await _customerRepository.SaveChangesAsync(
             cancellationToken);
 
-        return true;
     }
 
     private static CustomerResponse Map(Customer customer)
